@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.poppins {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+@keyframes common-bg {
+  0% {
+    background: linear-gradient(to right, #6366f1, #a855f7); /* indigo-500 → purple-500 */
+  }
+  50% {
+    background: linear-gradient(to right, #a855f7, #ec4899); /* purple-500 → pink-500 */
+  }
+  100% {
+    background: linear-gradient(to right, #6366f1, #a855f7);
+  }
+}
+
+/* Apply the animation */
+.gradient-animate {
+  background: linear-gradient(to right, #6366f1, #a855f7);
+  background-size: 200% 200%;
+  animation: common-bg 6s ease infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Tailwind-compatible class for marquee animation */
+.animate-marquee {
+  display: inline-flex;
+  animation: marquee 25s linear infinite;
+}
+
+/* ✅ Pause animation when hovered */
+.group:hover .animate-marquee {
+  animation-play-state: paused;
+}
+
