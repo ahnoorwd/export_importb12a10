@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router";
 
 const ProductCards = ({ singleproduct }) => {
   return (
@@ -18,10 +19,13 @@ const ProductCards = ({ singleproduct }) => {
           {singleproduct.productName}
         </h2>
 
-        <p className="text-lg font-bold text-green-600">Price :${singleproduct.price}</p>
+        <p className="text-lg font-bold text-green-600">
+          Price :${singleproduct.price}
+        </p>
 
         <p className="text-sm text-gray-500">
-          Origin Country: <span className="font-medium">{singleproduct.originCountry}</span>
+          Origin Country:{" "}
+          <span className="font-medium">{singleproduct.originCountry}</span>
         </p>
 
         <p className="text-sm text-gray-500">
@@ -29,17 +33,19 @@ const ProductCards = ({ singleproduct }) => {
         </p>
 
         <p className="text-sm text-gray-500">
-          Available Quantity: 
-          <span className="font-medium ml-1">{singleproduct.availableQuantity}</span>
+          Available Quantity:
+          <span className="font-medium ml-1">
+            {singleproduct.availableQuantity}
+          </span>
         </p>
       </div>
 
       {/* Button */}
-      <button
-        className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all duration-200"
-      >
-        See Details
-      </button>
+      <Link to={`/products/${singleproduct._id}`}>
+        <button className="mt-4 w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700 transition-all duration-200">
+          See Details
+        </button>
+      </Link>
     </div>
   );
 };

@@ -8,6 +8,7 @@ import Myimports from "../Pages/Myimports";
 import Addexports from "../Pages/Addexports";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import ProductDetails from "../Pages/ProductDetails";
 
 
 export const router = createBrowserRouter([
@@ -44,6 +45,13 @@ export const router = createBrowserRouter([
       {
         path: "/addexports",
         element: <Addexports></Addexports>,
+        
+     
+      },
+      {
+        path: "/products/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader:({params})=>fetch(`http://localhost:1000/products/${params.id}`)
         
      
       },
