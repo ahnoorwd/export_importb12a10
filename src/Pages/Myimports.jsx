@@ -14,7 +14,7 @@ const Myimports = () => {
       .then((data) => setImports(data));
   }, [user]);
 
-  // 🗑 Remove imported product
+  //  Remove imported product
   const handleRemove = async (id) => {
     const confirmDelete = window.confirm("Remove this imported product?");
     if (!confirmDelete) return;
