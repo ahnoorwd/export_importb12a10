@@ -9,6 +9,7 @@ import Addexports from "../Pages/Addexports";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import ProductDetails from "../Pages/ProductDetails";
+import PrivateRoute from "../Privateroute/PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -32,19 +33,19 @@ export const router = createBrowserRouter([
       },
       {
         path: "/myexports",
-        element: <Myexports></Myexports>,
+        element: <PrivateRoute><Myexports></Myexports></PrivateRoute>,
         
      
       },
       {
         path: "/myimports",
-        element: <Myimports></Myimports>,
+        element: <PrivateRoute><Myimports></Myimports></PrivateRoute>,
         
      
       },
       {
         path: "/addexports",
-        element: <Addexports></Addexports>,
+        element: <PrivateRoute><Addexports></Addexports></PrivateRoute>,
         
      
       },
