@@ -2,6 +2,8 @@ import React from 'react';
 import Banner from './Banner';
 import { useLoaderData } from 'react-router';
 import Latestproductcards from '../components/Latestproductcards';
+import Globalexim from './Globalexim';
+import RewardsSection from './RewardsSection ';
 
 const Home = () => {
     const latestproducts = useLoaderData();
@@ -16,6 +18,8 @@ const Home = () => {
                 latestproducts.map(singlelatestproduct=><Latestproductcards singlelatestproduct={singlelatestproduct}></Latestproductcards>)
                }
             </div>
+            <Globalexim></Globalexim>
+            <RewardsSection></RewardsSection>
         </div>
     );
 };

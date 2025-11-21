@@ -43,7 +43,11 @@ const Login = () => {
          e.target.reset();// optional redirect after login
       })
       .catch((error) => {
-        toast.error(error.message);
+           Swal.fire({
+                      title: "wrong password try agian!!!",
+                      text: "don't match your email or password",
+                      icon: "error",
+                    });
       });
   };
 
