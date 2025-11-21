@@ -1,22 +1,22 @@
 import React, { use } from "react";
 import { Link, NavLink } from "react-router";
-import logo from '../assets/importexport.avif'
+import logo from "../assets/importexport.avif";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-
+import Theme from "../Pages/Theme";
 
 const Navbar = () => {
-    const { user, logout } = use(AuthContext);
-  
+  const { user, logout } = use(AuthContext);
+
   const handlelogout = () => {
     logout()
       .then(() => {
         Swal.fire({
-                      title: "Loged-Out",
-                      text: "Logout Successfully",
-                      icon: "success",
-                    });
+          title: "Loged-Out",
+          text: "Logout Successfully",
+          icon: "success",
+        });
       })
       .catch((error) => {
         toast.error(error.message);
@@ -25,11 +25,9 @@ const Navbar = () => {
 
   const links = (
     <>
-
-   
       <li>
         <NavLink
-         to="/"
+          to="/"
           className={({ isActive }) =>
             `px-4 py-2 rounded-md text-sm font-semibold transition-all duration-300 ${
               isActive
@@ -53,13 +51,13 @@ const Navbar = () => {
             }`
           }
         >
-         All Products
+          All Products
         </NavLink>
       </li>
 
       <li>
         <NavLink
-          to='/myexports'
+          to="/myexports"
           className={({ isActive }) =>
             `px-4 py-2 rounded-md text-sm font-semibold transition-all duration-300 ${
               isActive
@@ -72,11 +70,9 @@ const Navbar = () => {
         </NavLink>
       </li>
 
-
-    
       <li>
         <NavLink
-         to='/myimports'
+          to="/myimports"
           className={({ isActive }) =>
             `px-4 py-2 rounded-md text-sm font-semibold transition-all duration-300 ${
               isActive
@@ -90,7 +86,7 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-         to='/addexports'
+          to="/addexports"
           className={({ isActive }) =>
             `px-4 py-2 rounded-md text-sm font-semibold transition-all duration-300 ${
               isActive
@@ -102,11 +98,6 @@ const Navbar = () => {
           Add Export
         </NavLink>
       </li>
-    
-   
-      
-
-
     </>
   );
 
@@ -155,7 +146,7 @@ const Navbar = () => {
               alt="Game Hub Logo"
               className="hidden sm:block w-10 h-10 md:w-12 md:h-12 object-contain"
             />
-            <span className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight">
+            <span className="hidden sm:inline-block text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 bg-clip-text text-transparent tracking-tight">
               Import<span className="text-indigo-400">Export</span>
             </span>
           </Link>
@@ -190,7 +181,7 @@ const Navbar = () => {
               </div>
 
               <button
-                 onClick={handlelogout}
+                onClick={handlelogout}
                 className="btn btn-sm md:btn-md bg-gradient-to-r from-red-500 to-pink-600 text-white border-none hover:opacity-90 shadow-lg shadow-red-500/30"
               >
                 Logout
@@ -212,6 +203,9 @@ const Navbar = () => {
               </Link>
             </>
           )}
+          <div className="hidden md:block">
+            <Theme></Theme>
+          </div>
         </div>
       </div>
     </div>
