@@ -16,7 +16,11 @@ const Login = () => {
   const handlegoogleregister = () => {
     signinwithgoogle()
       .then((result) => {
-        toast.success("Login successfully with Google!");
+        Swal.fire({
+          title: "Congrates You !!!",
+          text: "SignIn Successfull",
+          icon: "success",
+        });
         setuser(result.user);
         navigate("/");
       })
@@ -34,20 +38,20 @@ const Login = () => {
 
     signin(email, password)
       .then((result) => {
-         Swal.fire({
-                      title: "Congrates You !!!",
-                      text: "SignIn Successfull",
-                      icon: "success",
-                    });
+        Swal.fire({
+          title: "Congrates You !!!",
+          text: "SignIn Successfull",
+          icon: "success",
+        });
         navigate("/");
-         e.target.reset();// optional redirect after login
+        e.target.reset(); // optional redirect after login
       })
       .catch((error) => {
-           Swal.fire({
-                      title: "wrong password try agian!!!",
-                      text: "don't match your email or password",
-                      icon: "error",
-                    });
+        Swal.fire({
+          title: "wrong password try agian!!!",
+          text: "don't match your email or password",
+          icon: "error",
+        });
       });
   };
 
@@ -87,10 +91,7 @@ const Login = () => {
 
                   <div className="flex justify-between items-center text-sm mt-2">
                     {/* ✅ Pass email dynamically through state */}
-                    <Link
-                      
-                      className="link link-hover text-neutral underline cursor-pointer"
-                    >
+                    <Link className="link link-hover text-neutral underline cursor-pointer">
                       Forgot password?
                     </Link>
 

@@ -1,25 +1,43 @@
-import { Link, useNavigate,  } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { useContext } from "react";
 import { AuthContext } from "../Authprovider/AuthProvider";
 import Swal from "sweetalert2";
 import { toast } from "react-toastify";
-
+import { FcGoogle } from "react-icons/fc";
 
 const Register = () => {
-   const {createUser,updateUser,user,setuser} =useContext(AuthContext)
-   const navigate = useNavigate();
+  const { createUser, updateUser, user, setuser, signinwithgoogle } =
+    useContext(AuthContext);
+  const navigate = useNavigate();
 
-  
-     const handleRegister = (e) => {
+  const handlegoogleregister = () => {
+    signinwithgoogle()
+      .then((result) => {
+        // console.log(result.user);
+        Swal.fire({
+          title: "Congrates You !!!",
+          text: "Register Successfull",
+          icon: "success",
+        });
+        setuser(result.user);
+        navigate("/");
+      })
+      .catch((error) => {
+        toast.error(error.message);
+        console.log(error);
+      });
+  };
+
+  const handleRegister = (e) => {
     e.preventDefault();
     const form = e.target;
     const name = form.name.value;
     const photo = form.photo.value;
     const email = form.email.value;
     const password = form.password.value;
-     console.log({name,photo,email,password});
-     
-        const passwordRegex =
+    console.log({ name, photo, email, password });
+
+    const passwordRegex =
       /^(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_\-+=<>?{}[\]~])[A-Za-z\d!@#$%^&*()_\-+=<>?{}[\]~]{6,}$/;
 
     if (!passwordRegex.test(password)) {
@@ -32,10 +50,10 @@ const Register = () => {
       return; // stop the function here if invalid
     }
 
-       createUser(email, password)
+    createUser(email, password)
       .then((result) => {
         console.log(result.user);
-          updateUser({ displayName: name, photoURL: photo })
+        updateUser({ displayName: name, photoURL: photo })
           .then(() => {
             setuser({ ...user, displayName: name, photoURL: photo });
             Swal.fire({
@@ -50,15 +68,11 @@ const Register = () => {
             setuser(user);
             toast.error(error);
           });
-      
       })
       .catch((error) => {
         toast.error(error.message);
       });
-    
   };
-
- 
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to from-indigo-500 via-purple-500 to-pink-500 py-10 px-5">
@@ -87,7 +101,7 @@ const Register = () => {
             Register Here First
           </h2>
 
-          <form onSubmit={handleRegister}  className="space-y-4">
+          <form onSubmit={handleRegister} className="space-y-4">
             {/* Name */}
             <div>
               <label className="block text-gray-700 font-medium mb-1">
@@ -186,10 +200,10 @@ const Register = () => {
             {/* Google Register */}
             <button
               type="button"
-             
+              onClick={handlegoogleregister}
               className="btn w-full bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 flex items-center justify-center gap-2 rounded-lg shadow-sm"
             >
-              {/* <FcGoogle className="text-xl" /> */}
+              <FcGoogle className="text-xl" />
               Register with Google
             </button>
           </form>
