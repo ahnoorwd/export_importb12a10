@@ -10,6 +10,7 @@ const Home = () => {
     console.log(latestproducts);
     return (
         <div>
+            <title>Home</title>
             <Banner></Banner>
 
             <div><h3 className='text-center font-bold text-2xl mb-4'>Our Latest Product</h3></div>

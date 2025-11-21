@@ -8,6 +8,7 @@ import GameHubMarquee from "./GameHubMarquee";
 const Banner = () => {
   return (
     <div className="mt-8">
+      
       <div className="carousel w-full">
         <div id="item1" className="carousel-item w-full">
           <img

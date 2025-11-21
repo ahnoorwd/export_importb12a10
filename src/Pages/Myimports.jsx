@@ -54,6 +54,7 @@ const handleRemove = async (id) => {
 
   return (
    <div className="max-w-6xl mx-auto p-6">
+    <title>myimport</title>
   <h3 className="text-4xl font-extrabold mb-8 text-gray-800 tracking-tight">
     My Imported Products
   </h3>

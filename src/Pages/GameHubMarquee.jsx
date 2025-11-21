@@ -16,6 +16,7 @@ const GameHubMarquee = () => {
 
   return (
     <div className="group w-full overflow-hidden bg-gradient-to-r from-gray-900 via-black to-gray-900 py-4 border-y border-gray-700 shadow-md cursor-pointer mb-8 mt-8">
+     
       <div className="flex whitespace-nowrap animate-marquee text-gray-200 font-semibold text-lg tracking-wide ">
         {games.map((game, index) => (
           <span

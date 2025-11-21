@@ -58,6 +58,7 @@ const AddProducts = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-10 bg-gradient-to-br from-white to-blue-50 shadow-2xl rounded-2xl mt-12 border border-gray-200">
+      <title>Add Export</title>
       <h2 className="text-4xl font-extrabold mb-8 text-center text-blue-700">
         Add New Product
       </h2>

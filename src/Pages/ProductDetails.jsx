@@ -61,6 +61,7 @@ const ProductDetails = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-200 py-12 px-4">
+      <title>{product.productName}</title>
       <div
         className="max-w-5xl mx-auto bg-white/90 backdrop-blur shadow-2xl 
     rounded-3xl p-10 grid grid-cols-1 md:grid-cols-2 gap-12 border border-gray-200"

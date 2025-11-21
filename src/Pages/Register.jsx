@@ -76,7 +76,7 @@ const Register = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-to from-indigo-500 via-purple-500 to-pink-500 py-10 px-5">
-      <title>Game-Hub-Register</title>
+      <title>Register</title>
       <div className="w-full max-w-5xl flex flex-col lg:flex-row overflow-hidden rounded-3xl shadow-2xl border border-white/20 bg-white">
         {/* Left Side */}
         <div className="flex-1 bg-gradient-to-r from-indigo-700 via-purple-700 to-pink-600 text-white p-10 flex flex-col justify-center relative">

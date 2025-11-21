@@ -19,6 +19,7 @@ const Allproducts = () => {
 
   return (
     <div>
+        <title>All Products</title>
       <form onSubmit={HandleSearch}>
         <div className="flex flex-col md:flex-row justify-between items-center px-4 md:px-8 lg:px-12 my-4 space-y-4">
           

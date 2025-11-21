@@ -67,6 +67,7 @@ const Myexports = () => {
 
   return (
     <div className="max-w-6xl mx-auto p-6">
+      <title>myexport</title>
       <h3 className="text-3xl font-bold mb-6">My Exports</h3>
 
       {products.length === 0 ? (

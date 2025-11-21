@@ -57,7 +57,8 @@ const Login = () => {
 
   return (
     <section className="hero min-h-screen bg-base-200">
-      <title>Game-Hub-Login</title>
+
+      <title>Login</title>
       <div className="container mx-auto px-4">
         <div className="hero-content flex-col lg:flex-row-reverse gap-12">
           {/* Right Side - Login Card */}
