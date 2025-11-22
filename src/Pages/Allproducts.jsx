@@ -10,7 +10,7 @@ const Allproducts = () => {
     e.preventDefault();
     const search_text = e.target.search.value;
 
-    fetch(`http://localhost:1000/search?search=${search_text}`)
+    fetch(`https://b12a10importexport.vercel.app/search?search=${search_text}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data); // ✅ update UI

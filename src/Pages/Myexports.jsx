@@ -8,7 +8,7 @@ const Myexports = () => {
 
   useEffect(() => {
     if (!user?.email) return;
-    fetch(`http://localhost:1000/products/user/${encodeURIComponent(user.email)}`)
+    fetch(`https://b12a10importexport.vercel.app/products/user/${encodeURIComponent(user.email)}`)
       .then((res) => res.json())
       .then((data) => setProducts(data))
       .catch((err) => console.error(err));
@@ -18,7 +18,7 @@ const Myexports = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
 
-    const res = await fetch(`http://localhost:1000/products/${id}`, { method: "DELETE" });
+    const res = await fetch(`https://b12a10importexport.vercel.app/products/${id}`, { method: "DELETE" });
     const result = await res.json();
     if (result.deletedCount > 0) {
       setProducts((prev) => prev.filter((p) => p._id !== id));
@@ -45,7 +45,7 @@ const Myexports = () => {
       availableQuantity: Number(form.get("availableQuantity")),
     };
 
-    const res = await fetch(`http://localhost:1000/products/${editItem._id}`, {
+    const res = await fetch(`https://b12a10importexport.vercel.app/products/${editItem._id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(updated),

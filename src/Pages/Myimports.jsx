@@ -11,7 +11,7 @@ const Myimports = () => {
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`http://localhost:1000/imports/${user.email}`)
+    fetch(`https://b12a10importexport.vercel.app/imports/${user.email}`)
       .then((res) => res.json())
       .then((data) => setImports(data));
   }, [user]);
@@ -29,7 +29,7 @@ const handleRemove = async (id) => {
   }).then(async (result) => {
     if (result.isConfirmed) {
       // delete request
-      const res = await fetch(`http://localhost:1000/imports/${id}`, {
+      const res = await fetch(`https://b12a10importexport.vercel.app/imports/${id}`, {
         method: "DELETE",
       });
 

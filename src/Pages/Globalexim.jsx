@@ -1,6 +1,7 @@
 import React from 'react';
 import importexportservices from '../assets/importservices.avif'
 import importexportservices2 from '../assets/services2.avif'
+import ix3 from'../assets/ixtogether.webp'
 
 
 const Globalexim = () => {
@@ -60,7 +61,7 @@ const Globalexim = () => {
                       hover:scale-105 hover:shadow-2xl hover:bg-white/40 transition-all duration-500 
                       animate-[fadeInUp_1.2s_ease]">
         <img
-          src={importexportservices2}
+          src={ix3}
           className="rounded-xl mb-6 w-full h-48 object-cover shadow-md"
           alt="Warehousing"
         />

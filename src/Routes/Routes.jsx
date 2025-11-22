@@ -20,14 +20,14 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('http://localhost:1000/latest-products'),
+        loader:()=>fetch('https://b12a10importexport.vercel.app/latest-products'),
         
      
       },
       {
         path: "/allproducts",
         element: <Allproducts></Allproducts>,
-        loader: ()=>fetch('http://localhost:1000/products'),
+        loader: ()=>fetch('https://b12a10importexport.vercel.app/products'),
         
      
       },
@@ -52,7 +52,7 @@ export const router = createBrowserRouter([
       {
         path: "/products/:id",
         element: <PrivateRoute><ProductDetails></ProductDetails></PrivateRoute>,
-        loader:({params})=>fetch(`http://localhost:1000/products/${params.id}`)
+        loader:({params})=>fetch(`https://b12a10importexport.vercel.app/products/${params.id}`)
         
      
       },

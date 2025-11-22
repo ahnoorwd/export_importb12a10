@@ -22,7 +22,7 @@ const AddProducts = () => {
       userEmail: user?.email || "unknown@example.com", // store the owner
     };
 
-    fetch("http://localhost:1000/products", {
+    fetch("https://b12a10importexport.vercel.app/products", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(exportformdata),

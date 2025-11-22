@@ -21,7 +21,7 @@ const ProductDetails = () => {
 
   const handleImport = async () => {
     // Step 1: Save import record
-    await fetch("http://localhost:1000/import", {
+    await fetch("https://b12a10importexport.vercel.app/import", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -33,7 +33,7 @@ const ProductDetails = () => {
 
     // Step 2: Reduce product quantity
     const updateRes = await fetch(
-      `http://localhost:1000/products/${product._id}`,
+      `https://b12a10importexport.vercel.app/products/${product._id}`,
       {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
