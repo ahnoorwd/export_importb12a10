@@ -62,6 +62,9 @@ const Register = () => {
               icon: "success",
             });
             navigate("/");
+            setTimeout(() => {
+              window.location.reload();
+            }, 1000);
             e.target.reset();
           })
           .catch((error) => {

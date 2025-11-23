@@ -56,7 +56,7 @@ const ProductDetails = () => {
 
     setQuantity("");
     setOpen(false);
-    navigate('/myimports')
+     navigate('/myimports')
   };
 
   return (
