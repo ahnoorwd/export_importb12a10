@@ -6,7 +6,7 @@ This platform allows users to explore available import/export products, view pro
 ---
 
 ## 🔗 Live Website  
-👉 **https://your-live-website-link.com**
+👉 **https://exportimport-1dbad.web.app/**
 
 ---
 
@@ -55,4 +55,4 @@ This platform allows users to explore available import/export products, view pro
 
 ### 1️⃣ Clone the repository
 ```bash
-git clone https://github.com/your-repo-link.git
+git clone https://github.com/ahnoorwd/export_importb12a10.git

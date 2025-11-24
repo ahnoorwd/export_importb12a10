@@ -11,6 +11,7 @@ import Register from "../Pages/Register";
 import ProductDetails from "../Pages/ProductDetails";
 import PrivateRoute from "../Privateroute/PrivateRoute";
 import Error from "../Pages/Error";
+import ContactPage from "../Pages/ContactPage";
 
 
 export const router = createBrowserRouter([
@@ -67,6 +68,12 @@ export const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+        
+     
+      },
+      {
+        path: "/contact",
+        element:<ContactPage></ContactPage>,
         
      
       },
