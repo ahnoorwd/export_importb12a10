@@ -1,16 +1,58 @@
-# React + Vite
+# 🌍 Import & Export Management Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern full-stack web application built using **ReactJS**, **Tailwind CSS**, **MongoDB**, **Express.js**, and **Firebase Authentication**.  
+This platform allows users to explore available import/export products, view product details, and manage their own exported items.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Website  
+👉 **https://your-live-website-link.com**
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+- **User Authentication (Firebase)**  
+  Secure login and registration system using Firebase email/password and Google sign-in.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Add Export Products**  
+  Logged-in users can add export products with images, pricing, ratings, and descriptions.
+
+- **View All Available Products**  
+  Users can browse all products available for import with detailed information.
+
+- **My Exports Section**  
+  Each user can view, update, or delete only the products they themselves added.
+
+- **Product Search Functionality**  
+  Users can search products by name using a powerful backend search API using MongoDB regex.
+
+- **Responsive Modern UI**  
+  Built with TailwindCSS and DaisyUI for a clean, beautiful, mobile-friendly interface.
+
+- **Secure Backend API**  
+  Node.js + Express server connected to MongoDB for dynamic data storage.
+
+---
+
+## 🛠️ Tech Stack
+
+### **Frontend**
+- ReactJS
+- Tailwind CSS
+- DaisyUI
+- React Router DOM
+
+### **Backend**
+- Node.js
+- Express.js
+- MongoDB Atlas
+
+### **Authentication**
+- Firebase Authentication
+
+---
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/your-repo-link.git
